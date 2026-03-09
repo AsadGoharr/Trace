@@ -5,7 +5,7 @@
 **Paste your text. Set your speed. Let Trace do the typing.**
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/trace/mflgpmfdfdlknmohdeejahmnakdmnjfe)
-[![Live Site](https://img.shields.io/badge/Live%20Site-trace--app.vercel.app-black?style=for-the-badge&logo=vercel)](https://trace-app-phi.vercel.app)
+[![Live Site](https://img.shields.io/badge/Live%20Site-trace--app--brown.vercel.app-black?style=for-the-badge&logo=vercel)](https://trace-app-brown.vercel.app)
 [![Built with React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
 
 </div>
@@ -96,7 +96,7 @@ The extension writes typing session data directly to Supabase. The dashboard rea
 
 ## Links
 
-- **Live site:** https://trace-app-phi.vercel.app
+- **Live site:** https://trace-app-brown.vercel.app
 - **Chrome extension:** https://chromewebstore.google.com/detail/trace/mflgpmfdfdlknmohdeejahmnakdmnjfe
 
 ---
