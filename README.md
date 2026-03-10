@@ -4,7 +4,7 @@
 
 **Paste your text. Set your speed. Let Trace do the typing.**
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/trace/mflgpmfdfdlknmohdeejahmnakdmnjfe)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/fcmocfafblllhjbpcbliedmpoklfgape)
 [![Live Site](https://img.shields.io/badge/Live%20Site-trace--app--brown.vercel.app-black?style=for-the-badge&logo=vercel)](https://trace-app-brown.vercel.app)
 [![Built with React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
 
@@ -33,8 +33,13 @@ Trace is a Chrome extension that automatically types out your text on popular wr
 - **Deadlines** — set writing targets with urgency levels and track progress
 - **Profile** — public profile pages, username management, upgrade to Pro
 
-### Pro Plan
-Unlocks unlimited traces, higher WPM caps, advanced analytics, and priority support.
+### Pricing
+- **Trace Basic** — Free: 2,500 words/month, 5 sessions/day, 50 WPM, Human Touch Lite
+- **Trace Pro (Student)** — $4.99/mo, $14.99/semester, or $39.99/yr
+- **Trace Pro (Professional)** — $9.99/mo or $79.99/yr
+- **Founding Member** — $89 one-time (lifetime access)
+
+Pro unlocks unlimited words & sessions, full Human Touch Engine, full speed control (30–100+ WPM), saved drafts, analytics, deadlines, and AI features (coming soon).
 
 ---
 
@@ -55,12 +60,12 @@ Unlocks unlimited traces, higher WPM caps, advanced analytics, and priority supp
 
 | Layer | Technology |
 |---|---|
-| Frontend (site + extension) | React 18, TypeScript, Vite |
+| Frontend (site + extension) | React 19, TypeScript, Vite 7 |
 | Styling | Tailwind CSS v4 |
-| Backend / Auth / DB | Supabase (PostgreSQL + Auth + Realtime) |
-| Payments | Stripe |
+| Backend / Auth / DB | Supabase (PostgreSQL + Auth + Realtime + Edge Functions) |
+| Payments | Stripe (Payment Links + Webhooks) |
 | Hosting | Vercel (site), Chrome Web Store (extension) |
-| Animations | Framer Motion |
+| Animations | Framer Motion, Three.js |
 
 ---
 
@@ -97,7 +102,7 @@ The extension writes typing session data directly to Supabase. The dashboard rea
 ## Links
 
 - **Live site:** https://trace-app-brown.vercel.app
-- **Chrome extension:** https://chromewebstore.google.com/detail/trace/mflgpmfdfdlknmohdeejahmnakdmnjfe
+- **Chrome extension:** https://chromewebstore.google.com/detail/fcmocfafblllhjbpcbliedmpoklfgape
 
 ---
 

@@ -35,13 +35,13 @@ A step-by-step checklist to go from "almost ready" to public launch.
 - [ ] Chrome Web Store link updated everywhere in `App.tsx` (all 3 `chromewebstore` href instances)
 - [ ] Waitlist banner removed OR updated to "Now Live — Install Extension"
 - [ ] Waitlist form CTA replaced with "Install Extension" button after launch
-- [ ] Pricing page is accurate (free tier limits, Pro features)
-- [ ] Stripe payments tested end-to-end in production (not test mode)
+- [x] Pricing page is accurate (free tier limits, Pro features)
+- [x] Stripe payments tested end-to-end in production (not test mode)
 - [ ] Supabase RLS policies reviewed — no unauthorized data access possible
-- [ ] All Supabase environment variables set in Vercel production
+- [x] All Supabase environment variables set in Vercel production
 - [ ] 404 and error states look clean
 - [ ] `robots.txt` / sitemap in place for SEO (optional but helpful)
-- [ ] Vercel Analytics confirmed working
+- [x] Vercel Analytics confirmed working
 
 ---
 
