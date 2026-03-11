@@ -7,6 +7,7 @@
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/fcmocfafblllhjbpcbliedmpoklfgape)
 [![Live Site](https://img.shields.io/badge/Live%20Site-trace--app--brown.vercel.app-black?style=for-the-badge&logo=vercel)](https://trace-app-brown.vercel.app)
 [![Built with React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=AsadGoharr.Trace&style=for-the-badge&color=1f6feb&labelColor=0d1117)
 
 </div>
 
@@ -34,7 +35,7 @@ Trace is a Chrome extension that automatically types out your text on popular wr
 - **Profile** — public profile pages, username management, upgrade to Pro
 
 ### Pricing
-- **Trace Basic** — Free: 2,500 words/month, 5 sessions/day, 50 WPM, Human Touch Lite
+- **Trace Basic** — Free: 5,000 words/month, 5 sessions/day, 50 WPM, Human Touch Lite
 - **Trace Pro (Student)** — $4.99/mo, $14.99/semester, or $39.99/yr
 - **Trace Pro (Professional)** — $9.99/mo or $79.99/yr
 - **Founding Member** — $89 one-time (lifetime access)
