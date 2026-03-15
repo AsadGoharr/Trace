@@ -15,7 +15,7 @@
 
 ## What is Trace?
 
-Trace is a Chrome extension that automatically types out your text on popular writing platforms — at a natural, human-like speed you control. Pair it with the web dashboard to track your productivity, compete on the leaderboard, and manage writing deadlines — all in one place.
+Trace is a free Chrome extension that automatically types out your text on popular writing platforms — at a natural, human-like speed you control. Pair it with the web dashboard to track your productivity, compete on the leaderboard, and manage writing deadlines — all in one place.
 
 ---
 
@@ -23,24 +23,23 @@ Trace is a Chrome extension that automatically types out your text on popular wr
 
 ### Chrome Extension
 - **Auto-typing engine** — pastes and types your text keystroke-by-keystroke at your chosen WPM
-- **Human Engine** — randomizes timing, introduces micro-pauses, and simulates natural typing rhythm to make output look authentic
+- **Human Touch Engine** — randomizes timing, introduces micro-pauses, and simulates natural typing rhythm to make output look authentic
 - **Multi-platform support** — works on Google Docs, Google Slides, Microsoft Word (web), Notion, Overleaf, and Canvas LMS
 - **Session persistence** — resume a trace where you left off even after closing the popup
 
 ### Web Dashboard
 - **Analytics** — WPM trend chart, activity heatmap, words-per-month counter
 - **Document History** — searchable log of every session with platform, word count, and CSV export
-- **Leaderboard** — compete with friends; in-app friend requests and ranking system
+- **Leaderboard** — compete with friends and the global community; in-app friend requests and ranking system
 - **Deadlines** — set writing targets with urgency levels and track progress
-- **Profile** — public profile pages, username management, upgrade to Pro
+- **Profile** — public profile pages and username management
 
-### Pricing
-- **Trace Basic** — Free: 5,000 words/month, 5 sessions/day, 50 WPM, Human Touch Lite
-- **Trace Pro (Student)** — $4.99/mo, $14.99/semester, or $39.99/yr
-- **Trace Pro (Professional)** — $9.99/mo or $79.99/yr
-- **Founding Member** — $89 one-time (lifetime access)
-
-Pro unlocks unlimited words & sessions, full Human Touch Engine, full speed control (30–100+ WPM), saved drafts, analytics, deadlines, and AI features (coming soon).
+### What's Included (Free)
+- 2,500 words per month
+- 5 sessions per day
+- Fixed 50 WPM typing speed
+- Human Touch Lite engine
+- Full dashboard access (analytics, leaderboard, deadlines, history)
 
 ---
 
@@ -64,7 +63,6 @@ Pro unlocks unlimited words & sessions, full Human Touch Engine, full speed cont
 | Frontend (site + extension) | React 19, TypeScript, Vite 7 |
 | Styling | Tailwind CSS v4 |
 | Backend / Auth / DB | Supabase (PostgreSQL + Auth + Realtime + Edge Functions) |
-| Payments | Stripe (Payment Links + Webhooks) |
 | Hosting | Vercel (site), Chrome Web Store (extension) |
 | Animations | Framer Motion, Three.js |
 
@@ -109,7 +107,7 @@ The extension writes typing session data directly to Supabase. The dashboard rea
 
 ## Status
 
-Actively developed. The source code is private, but the extension and site are publicly available.
+Actively developed. Free to use — no subscriptions or payments required.
 
 ---
 

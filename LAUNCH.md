@@ -8,9 +8,9 @@ A step-by-step checklist to go from "almost ready" to public launch.
 
 ### Extension
 - [ ] All platforms tested end-to-end (Google Docs, Slides, Notion, Overleaf, Word, Canvas)
-- [ ] Human Engine fully tested — pauses feel natural, no robotic bursts
+- [ ] Human Touch Engine fully tested — pauses feel natural, no robotic bursts
 - [ ] Session persistence tested — close and reopen popup, trace resumes correctly
-- [ ] Pro plan feature gating works (WPM cap, word limit, etc.)
+- [ ] Feature gating works (WPM cap, word limit, session limit)
 - [ ] Extension icons (16, 48, 128px) finalized in `manifest.json`
 - [ ] Manifest V3 permissions are minimal and justified
 - [ ] `background.js` service worker has no console errors in production
@@ -35,8 +35,7 @@ A step-by-step checklist to go from "almost ready" to public launch.
 - [ ] Chrome Web Store link updated everywhere in `App.tsx` (all 3 `chromewebstore` href instances)
 - [ ] Waitlist banner removed OR updated to "Now Live — Install Extension"
 - [ ] Waitlist form CTA replaced with "Install Extension" button after launch
-- [x] Pricing page is accurate (free tier limits, Pro features)
-- [x] Stripe payments tested end-to-end in production (not test mode)
+- [x] Features page is accurate (free tier limits, what's included)
 - [ ] Supabase RLS policies reviewed — no unauthorized data access possible
 - [x] All Supabase environment variables set in Vercel production
 - [ ] 404 and error states look clean
@@ -88,7 +87,6 @@ A step-by-step checklist to go from "almost ready" to public launch.
 ## Nice-to-Have (Later)
 
 - [ ] Custom domain configured on Vercel (e.g. `usetrace.io`)
-- [ ] Add affiliate / referral program
 - [ ] Blog post: "How I built Trace" (drives SEO + developer interest)
 - [ ] Add Firefox extension (Manifest V3 compatible)
 - [ ] Public roadmap page on the site
