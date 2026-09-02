@@ -15,31 +15,59 @@
 
 ## What is Trace?
 
-Trace is a free Chrome extension that automatically types out your text on popular writing platforms — at a natural, human-like speed you control. Pair it with the web dashboard to track your productivity, compete on the leaderboard, and manage writing deadlines — all in one place.
+Trace is a Chrome extension that types text you have already written into web
+editors, one keystroke at a time, at a speed you choose.
+
+Paste does not always work. Some editors block it, some mangle formatting, some
+lose your line breaks. Trace enters your text the way a keyboard would, and
+pairs with a web dashboard for your drafts, deadlines, history and the monthly
+leaderboard.
+
+**What it is not:** Trace does not write anything for you, and a revision
+history it produces is a record of typing rather than of composition. Where
+work must be typed directly, or automated input is not allowed, Trace is not
+the right tool — see the [ethics statement](https://trace-app-brown.vercel.app/ethics).
 
 ---
 
 ## Features
 
 ### Chrome Extension
-- **Auto-typing engine** — pastes and types your text keystroke-by-keystroke at your chosen WPM
-- **Human Touch Engine** — randomizes timing, introduces micro-pauses, and simulates natural typing rhythm to make output look authentic
-- **Multi-platform support** — works on Google Docs, Google Slides, Microsoft Word (web), Notion, Overleaf, and Canvas LMS
-- **Session persistence** — resume a trace where you left off even after closing the popup
+- **Typing engine** — enters your text keystroke by keystroke at your chosen WPM
+- **Pacing** — varies rhythm the way typing does: micro-pauses between words, hesitation at punctuation, slowdowns at the end of a sentence
+- **Pre-flight check** — confirms there is somewhere for the keystrokes to land before it starts, rather than failing part-way
+- **Pause, resume and recover** — stop mid-trace and pick up where you left off, even after closing the popup
+- **Multi-platform** — Google Docs, Google Slides, Microsoft Word (web), Notion, Overleaf, Canvas LMS and 30+ other web editors
 
 ### Web Dashboard
-- **Analytics** — WPM trend chart, activity heatmap, words-per-month counter
-- **Document History** — searchable log of every session with platform, word count, and CSV export
-- **Leaderboard** — compete with friends and the global community; in-app friend requests and ranking system
-- **Deadlines** — set writing targets with urgency levels and track progress
-- **Profile** — public profile pages and username management
+- **Document history** — searchable log of every session with platform, word count and CSV export
+- **Draft vault** — keep drafts and notes in one place
+- **Deadlines** — set writing targets and track pace against them
+- **Leaderboard** — global and friends-only rankings, with in-app friend requests
+- **Profile** — public profile pages and display-name management
 
-### What's Included (Free)
-- 2,500 words per month
-- 5 sessions per day
-- Fixed 50 WPM typing speed
-- Human Touch Lite engine
-- Full dashboard access (analytics, leaderboard, deadlines, history)
+---
+
+## Plans
+
+**Free** — no word cap, no session cap.
+
+- Unlimited words
+- Full speed control, 30–100 WPM
+- Human Touch Lite for an even rhythm
+- Draft vault, deadlines and pacing
+- File uploads (`.txt`, `.md`, `.csv`)
+- Document history, leaderboard, keyboard shortcuts and notifications
+
+**Trace Pro** — CAD $4.99/month. Everything in Free, plus:
+
+- Full Human Touch engine — sentence and punctuation pauses, bursts, corrections and fatigue
+- Your Fingerprint — Trace paces to your own measured rhythm
+- Breaks on long documents — steps away between stretches instead of typing thousands of words unbroken
+
+New accounts get **7 days of Pro free**, starting the first time the extension
+is opened. The top three on the monthly leaderboard win 3, 2 and 1 days of Pro,
+granted automatically on the 1st.
 
 ---
 
@@ -63,8 +91,9 @@ Trace is a free Chrome extension that automatically types out your text on popul
 | Frontend (site + extension) | React 19, TypeScript, Vite 7 |
 | Styling | Tailwind CSS v4 |
 | Backend / Auth / DB | Supabase (PostgreSQL + Auth + Realtime + Edge Functions) |
+| Payments | Stripe |
 | Hosting | Vercel (site), Chrome Web Store (extension) |
-| Animations | Framer Motion, Three.js |
+| Animations | Framer Motion |
 
 ---
 
@@ -73,7 +102,8 @@ Trace is a free Chrome extension that automatically types out your text on popul
 ```
 trace/
 ├── trace-extension/    # Chrome Manifest V3 extension (React popup)
-└── trace-website/      # Marketing site + full user dashboard (React SPA)
+├── trace-website/      # Marketing site + full user dashboard (React SPA)
+└── supabase/           # Migrations and edge functions
 ```
 
 ---
@@ -81,20 +111,22 @@ trace/
 ## Architecture Overview
 
 ```
-┌─────────────────┐        ┌─────────────────────┐
-│  Chrome Extension│──────▶│   Supabase (DB/Auth) │
-│  (Manifest V3)   │        │  - sessions table    │
-│  React + Vite    │        │  - profiles table    │
-└─────────────────┘        │  - leaderboard table │
-                            └──────────┬──────────┘
-┌─────────────────┐                   │
-│  Web Dashboard  │◀──────────────────┘
-│  React SPA      │
-│  Vercel         │
-└─────────────────┘
+┌──────────────────┐        ┌──────────────────────┐
+│ Chrome Extension │───────▶│  Supabase (DB/Auth)  │
+│  (Manifest V3)   │        │  - traces            │
+│  React + Vite    │        │  - user_profiles     │
+└──────────────────┘        │  - leaderboard       │
+                            │  - edge functions    │
+┌──────────────────┐        └──────────┬───────────┘
+│  Web Dashboard   │◀──────────────────┘
+│  React SPA       │
+│  Vercel          │
+└──────────────────┘
 ```
 
-The extension writes typing session data directly to Supabase. The dashboard reads from the same database, giving users a real-time view of their activity across all sessions and devices.
+The extension writes session data straight to Supabase. The dashboard reads the
+same database, so activity shows up across every device. Scheduled edge
+functions handle the monthly leaderboard reset and winner prizes.
 
 ---
 
@@ -102,15 +134,12 @@ The extension writes typing session data directly to Supabase. The dashboard rea
 
 - **Live site:** https://trace-app-brown.vercel.app
 - **Chrome extension:** https://chromewebstore.google.com/detail/fcmocfafblllhjbpcbliedmpoklfgape
+- **Changelog:** https://trace-app-brown.vercel.app/changelog
+- **Ethics statement:** https://trace-app-brown.vercel.app/ethics
 
 ---
 
 ## Status
 
-Actively developed. Free to use — no subscriptions or payments required.
-
----
-
-<div align="center">
-  <sub>Built by <a href="https://github.com/AsadGoharr">AsadGoharr</a></sub>
-</div>
+Actively developed. This repository holds the public documentation; the
+application source is private.
