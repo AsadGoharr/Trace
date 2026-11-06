@@ -132,7 +132,7 @@ functions handle the monthly leaderboard reset and winner prizes.
 
 ## Links
 
-- **Live site:** https://trace-app-brown.vercel.app
+- **Live site:** [https://trace-app-brown.vercel.app](https://tracetype.me/)
 - **Chrome extension:** https://chromewebstore.google.com/detail/fcmocfafblllhjbpcbliedmpoklfgape
 - **Changelog:** https://trace-app-brown.vercel.app/changelog
 - **Ethics statement:** https://trace-app-brown.vercel.app/ethics
