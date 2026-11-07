@@ -5,9 +5,8 @@
 **Paste your text. Set your speed. Let Trace do the typing.**
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/fcmocfafblllhjbpcbliedmpoklfgape)
-[![Live Site](https://img.shields.io/badge/Live%20Site-trace--app--brown.vercel.app-black?style=for-the-badge&logo=vercel)](https://trace-app-brown.vercel.app)
+[![Live Site](https://img.shields.io/badge/Live%20Site-tracetype.me-black?style=for-the-badge&logo=vercel)](https://tracetype.me)
 [![Built with React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=AsadGoharr.Trace&style=for-the-badge&color=1f6feb&labelColor=0d1117)
 
 </div>
 
@@ -26,7 +25,7 @@ leaderboard.
 **What it is not:** Trace does not write anything for you, and a revision
 history it produces is a record of typing rather than of composition. Where
 work must be typed directly, or automated input is not allowed, Trace is not
-the right tool — see the [ethics statement](https://trace-app-brown.vercel.app/ethics).
+the right tool — see the [ethics statement](https://tracetype.me/ethics).
 
 ---
 
